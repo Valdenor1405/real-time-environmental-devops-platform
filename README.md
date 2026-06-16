@@ -10,9 +10,7 @@ Criar um projeto visual, robusto e fácil de executar para GitHub e LinkedIn, de
 
 ## Tema escolhido
 
-Monitoramento ambiental em tempo real usando dados públicos de clima e qualidade do ar.
-
-Esse tema é forte para recrutadores porque une:
+Monitoramento ambiental em tempo real usando dados públicos de clima e qualidade do ar, contendo:
 
 - DevOps
 - Engenharia de Dados
@@ -149,7 +147,7 @@ make down       # parar containers
 make clean      # remover volumes e reiniciar do zero
 ```
 
-## Por que este projeto é sênior
+## Por que este projeto é funcional?
 
 Este não é apenas um dashboard. Ele mostra uma arquitetura completa:
 
@@ -163,7 +161,7 @@ Este não é apenas um dashboard. Ele mostra uma arquitetura completa:
 - Execução reproduzível via Docker.
 - Documentação clara para visitantes.
 
-## Próximas melhorias sugeridas
+## Próximas melhorias futuras que iremos executar:
 
 - Deploy em cloud: Azure, AWS, GCP ou Oracle Cloud.
 - Kubernetes com Helm.
@@ -174,5 +172,7 @@ Este não é apenas um dashboard. Ele mostra uma arquitetura completa:
 - Machine Learning para previsão de risco ambiental.
 
 ## Autor
+
+Valdenor Aquino
 
 Projeto criado para portfólio DevOps, GitHub e LinkedIn.
