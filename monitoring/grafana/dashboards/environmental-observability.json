@@ -1,0 +1,13 @@
+{
+  "title": "Environmental Platform Observability",
+  "uid": "environmental-platform",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "15s",
+  "panels": [
+    {"type":"stat","title":"API Requests","gridPos":{"x":0,"y":0,"w":8,"h":4},"targets":[{"expr":"sum(http_requests_total)","refId":"A"}]},
+    {"type":"stat","title":"Collector Readings","gridPos":{"x":8,"y":0,"w":8,"h":4},"targets":[{"expr":"sum(collector_readings_total)","refId":"A"}]},
+    {"type":"stat","title":"Collector Errors","gridPos":{"x":16,"y":0,"w":8,"h":4},"targets":[{"expr":"sum(collector_errors_total)","refId":"A"}]},
+    {"type":"timeseries","title":"Readings by City/Risk","gridPos":{"x":0,"y":5,"w":24,"h":8},"targets":[{"expr":"sum by(city, risk) (rate(collector_readings_total[5m]))","refId":"A"}]}
+  ]
+}
