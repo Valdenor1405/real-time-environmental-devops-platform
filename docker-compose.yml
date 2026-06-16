@@ -3,8 +3,8 @@ services:
     image: postgres:16-alpine
     container_name: env-postgres
     environment:
-      POSTGRES_USER: devops
-      POSTGRES_PASSWORD: devops
+      POSTGRES_USER: ${POSTGRES_USER:-devops_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
       POSTGRES_DB: environment
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -87,8 +87,8 @@ services:
     image: grafana/grafana:11.4.0
     container_name: env-grafana
     environment:
-      GF_SECURITY_ADMIN_USER: admin
-      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-change_me}
     volumes:
       - grafana_data:/var/lib/grafana
       - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
